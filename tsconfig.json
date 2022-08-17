@@ -4,8 +4,9 @@
     "paths": {
       "~/*": ["./src/*"]
     },
-    "composite": true,
-    "types": ["node"],
     "jsx": "preserve"
   },
+  "exclude": [
+    "**/dist/**"
+  ]
 }
