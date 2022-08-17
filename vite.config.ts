@@ -13,13 +13,16 @@ export default defineConfig({
     }),
     Components(),
     AutoImport({
-      imports: ['vue'],
+      imports: ['vue', '@vueuse/core'],
       dirs: [
         './src/composables',
       ],
       vueTemplate: true,
     }),
     UnoCSS({
+      shortcuts: {
+        'border-base': 'border-gray/20 dark:border-gray/15',
+      },
       presets: [
         presetUno(),
         presetAttributify(),

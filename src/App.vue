@@ -3,16 +3,19 @@
 </script>
 
 <template>
-  <div border="~ gray/20" m2>
-    <Action />
-    <TimeSchedule />
+  <div font-mono h-screen bg-gray:10>
+    <Navbar />
+    <div border="~ base" bg-white dark:bg-truegray-900 rounded shadow mx8>
+      <ActionBar />
+      <TimeSchedule />
+    </div>
   </div>
 </template>
 
 <style>
-html{
-  background: #222;
-  color: white;
-  color-scheme: dark;
+html.dark{
+  background-color: #222;
+  color: #fff;
+  transition: color 0.5s ease-in-out;
 }
 </style>
