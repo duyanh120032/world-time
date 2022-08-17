@@ -1,13 +1,12 @@
 <script setup lang="ts">
 
 </script>
+
 <template>
   <div>
-    <Hello/>
+    <Hello />
   </div>
 </template>
-
-
 
 <style>
 html{
