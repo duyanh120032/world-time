@@ -3,8 +3,9 @@
 </script>
 
 <template>
-  <div>
-    <Hello />
+  <div border="~ gray/20" m2>
+    <Action />
+    <TimeSchedule />
   </div>
 </template>
 

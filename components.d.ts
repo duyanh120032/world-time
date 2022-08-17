@@ -7,6 +7,9 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Action: typeof import('./src/components/Action.vue')['default']
     Hello: typeof import('./src/components/Hello.vue')['default']
+    TimeSchedule: typeof import('./src/components/TimeSchedule.vue')['default']
+    TimezoneSearch: typeof import('./src/components/TimezoneSearch.vue')['default']
   }
 }
