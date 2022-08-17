@@ -5,7 +5,7 @@
 
 [build]
   publish = "dist"
-  command = "yarn install && yarn build"
+  command = "npm install && npm run build"
 
 [[redirects]]
   from = "/*"
