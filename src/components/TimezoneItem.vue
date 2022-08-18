@@ -5,16 +5,28 @@ const { timezone } = defineProps<{ timezone: Timezone }>()
 
 const state = computed(() => timezone.name.split('/')[0])
 const city = computed(() => timezone.name.split('/')[1])
-const offset = computed(() => timezone.offset > 0 ? `+${timezone.offset}` : timezone.offset)
-const time = computed(() => timeNow.value.toLocaleTimeString('en-US', {
-  timeZone: timezone.name,
-  hour: '2-digit',
-  minute: '2-digit',
-}))
+const offset = computed(() =>
+  timezone.offset > 0 ? `+${timezone.offset}` : timezone.offset,
+)
+const time = computed(() =>
+  timeNow.value.toLocaleTimeString('en-US', {
+    timeZone: timezone.name,
+    hour: '2-digit',
+    minute: '2-digit',
+  }),
+)
 </script>
 
 <template>
-  <div flex="~" items-center gap2 bg-transparent font="semibold" w-full w="[280px]">
+  <div
+    flex="~"
+    items-center
+    gap2
+    bg-transparent
+    font="semibold"
+    w-full
+    w="[280px]"
+  >
     <div w-12 text-center text-blue-500>
       {{ offset }}
     </div>
@@ -35,6 +47,4 @@ const time = computed(() => timeNow.value.toLocaleTimeString('en-US', {
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

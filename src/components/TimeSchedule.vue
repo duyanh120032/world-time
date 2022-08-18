@@ -1,4 +1,5 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
   <div relative select-none>
@@ -18,6 +19,7 @@
           m--1px
           i-carbon:caret-up
           title="Move up"
+          @click="moveUpTimeZone(idx)"
         />
 
         <button
@@ -26,6 +28,7 @@
           i-carbon:close
           scale-75
           title="Set to home zone"
+          @click="removeFromTimeZone(idx)"
         />
         <button
           v-if="idx !== zones.length - 1"
@@ -33,6 +36,7 @@
           m--1px
           i-carbon:caret-down
           title="Move down"
+          @click="moveDownTimeZone(idx)"
         />
       </div>
     </div>

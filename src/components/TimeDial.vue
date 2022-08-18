@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { format } from 'date-fns'
-import type { Timezone } from '~/types'
-const { timezone } = defineProps<{ timezone: Timezone }>()
+import { format } from "date-fns";
+import type { Timezone } from "~/types";
+const { timezone } = defineProps<{ timezone: Timezone }>();
 
 const hours = computed(() =>
-  Array.from({ length: 24 }, (_, i) => i + timezone.offset + 1),
-)
+  Array.from({ length: 24 }, (_, i) => i + timezone.offset + 1)
+);
 const days = computed(() => [
-  hours.value.filter(i => i < 0).map(i => (i + 24) % 24),
-  hours.value.filter(i => i >= 0 && i < 24),
-  hours.value.filter(i => i >= 24).map(i => i % 24),
-])
+  hours.value.filter((i) => i < 0).map((i) => (i + 24) % 24),
+  hours.value.filter((i) => i >= 0 && i < 24),
+  hours.value.filter((i) => i >= 24).map((i) => i % 24),
+]);
 
 const isMidnight = (h: number) => {
-  return h <= 5 || h >= 22
-}
+  return h <= 5 || h >= 22;
+};
 const isNight = (h: number) => {
-  return h <= 7 || h >= 18
-}
+  return h <= 7 || h >= 18;
+};
 </script>
 
 <template>

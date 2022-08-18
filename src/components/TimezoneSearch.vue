@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Fuse from 'fuse.js'
+import autoAnimate from '@formkit/auto-animate'
 import type { Timezone } from '../types'
 
 const fuse = new Fuse(timezones, {
@@ -26,6 +27,7 @@ const onKeyDown = (e: KeyboardEvent) => {
 }
 const refEl = ref<HTMLDivElement | null>(null)
 onMounted(() => {
+  autoAnimate(refEl.value) // thats it!
   setTimeout(() => {
     refEl.value.scrollTop = 200
   }, 2000)
