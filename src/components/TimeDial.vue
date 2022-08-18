@@ -33,8 +33,8 @@ const isNight = (h: number) => {
           h8
           :style="`width:${dayCellWidth}px`"
           :class="[
-            isMidnight(i) ? 'bg-sky/40' : '',
-            isNight(i) ? 'bg-sky/10' : '',
+            isNight(i) ? 'bg-indigo:30 ' : '',
+            isMidnight(i) ? 'bg-indigo:80 text-white' : '',
           ]"
         >
           <div v-if="i">

@@ -14,7 +14,7 @@ const time = computed(() => timeNow.value.toLocaleTimeString('en-US', {
 </script>
 
 <template>
-  <div flex="~" items-center gap2 bg-transparent font="semibold" w-full>
+  <div flex="~" items-center gap2 bg-transparent font="semibold" w-full w="[280px]">
     <div w-12 text-center text-blue-500>
       {{ offset }}
     </div>
@@ -24,7 +24,7 @@ const time = computed(() => timeNow.value.toLocaleTimeString('en-US', {
           <span>{{ city }}</span>
           <sup rounded border="~ gray/20" px1 ml1> {{ timezone.abbr }}</sup>
         </div>
-        <div op50 leading-1rem font-medium text-xs>
+        <div op50 leading-1rem font-medium text-xs text="overflow-ellipsis">
           {{ state }}
         </div>
       </div>
