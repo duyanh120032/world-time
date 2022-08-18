@@ -24,6 +24,12 @@ const onKeyDown = (e: KeyboardEvent) => {
   else if (e.key === 'Enter' && input.value)
     add(searchResults.value[index.value].item)
 }
+const refEl = ref<HTMLDivElement | null>(null)
+onMounted(() => {
+  setTimeout(() => {
+    refEl.value.scrollTop = 200
+  }, 2000)
+})
 </script>
 
 <template>
@@ -41,6 +47,7 @@ const onKeyDown = (e: KeyboardEvent) => {
     >
     <div
       v-show="input"
+      ref="refEl"
       absolute
       top-full
       bg-gray-200

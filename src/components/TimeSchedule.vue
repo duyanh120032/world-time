@@ -40,7 +40,6 @@
       flex
       items-center
       gap2
-      flex-wrap
       w-max
     >
       <TimezoneItem :timezone="item" />

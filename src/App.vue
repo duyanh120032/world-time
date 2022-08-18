@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div font-mono h-screen bg-gray:10>
+  <div font-sans h-screen bg-gray:10>
     <Navbar />
     <div border="~ base" bg-white dark:bg-truegray-900 rounded shadow mx8>
       <ActionBar />

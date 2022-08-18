@@ -41,7 +41,7 @@ const isNight = (h: number) => {
             {{ i }}
           </div>
           <div v-else text="xs center">
-            {{ format(timeNow, "MM") }}
+            {{ format(timeNow, "MMM") }}
             {{ format(timeNow, "dd") }}
           </div>
         </div>
